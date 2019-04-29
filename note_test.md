@@ -7,7 +7,7 @@ This API can be use for automatic differentiation computing.
 
  - From the input/output point of view, the Gradient Tape can return the differentiation of any two tensors.
  - Not very usefull for me
- - can be used in a model to return the gradient differentiation.
+ - can be used in a model to return  the gradient differentiation.
 
 ### Usage
 ```python
@@ -16,7 +16,7 @@ with tf.GradientTape() as t: #create a new tape
   	t.watch(x) # ???
   	y = tf.reduce_sum(x) # apply computing  
   	z = tf.multiply(y, y) # apply computing
-dz_dx = t.gradient(z, x) ### main function which return the differentiation of z with respect to x
+dz_dx = t.gradient(z, x) ### ma	in function which return the differentiation of z with respect to x
 # we can change x to y or any intermediate value, too.
 
 ## judge the result
